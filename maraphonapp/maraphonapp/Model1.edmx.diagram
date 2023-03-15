@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="63d9628582a1481d892fab69b767537f" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="user16Model.Charity" Width="1.5" PointX="6" PointY="10.125" />
+        <EntityTypeShape EntityType="user16Model.Country" Width="1.5" PointX="0.75" PointY="6.5" />
+        <EntityTypeShape EntityType="user16Model.Event" Width="1.5" PointX="5.25" PointY="13" />
+        <EntityTypeShape EntityType="user16Model.EventType" Width="1.5" PointX="3" PointY="16.625" />
+        <EntityTypeShape EntityType="user16Model.Gender" Width="1.5" PointX="3.75" PointY="3.25" />
+        <EntityTypeShape EntityType="user16Model.Marathon" Width="1.5" PointX="3" PointY="13.25" />
+        <EntityTypeShape EntityType="user16Model.Position" Width="1.5" PointX="10.75" PointY="2.375" />
+        <EntityTypeShape EntityType="user16Model.RaceKitOption" Width="1.5" PointX="6" PointY="3.25" />
+        <EntityTypeShape EntityType="user16Model.Registration" Width="1.5" PointX="8.25" PointY="5.75" />
+        <EntityTypeShape EntityType="user16Model.RegistrationEvent" Width="1.5" PointX="10.5" PointY="9.625" />
+        <EntityTypeShape EntityType="user16Model.RegistrationStatu" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="user16Model.Role" Width="1.5" PointX="1.5" PointY="10" />
+        <EntityTypeShape EntityType="user16Model.Runner" Width="1.5" PointX="6" PointY="6.125" />
+        <EntityTypeShape EntityType="user16Model.Sponsorship" Width="1.5" PointX="10.5" PointY="6.625" />
+        <EntityTypeShape EntityType="user16Model.Staff" Width="1.5" PointX="13" PointY="2" />
+        <EntityTypeShape EntityType="user16Model.Timesheet" Width="1.5" PointX="15.25" PointY="2.375" />
+        <EntityTypeShape EntityType="user16Model.User" Width="1.5" PointX="3.75" PointY="9.625" />
+        <EntityTypeShape EntityType="user16Model.Volunteer" Width="1.5" PointX="3" PointY="6.5" />
+        <AssociationConnector Association="user16Model.FK__Registrat__Chari__5AEE82B9" />
+        <AssociationConnector Association="user16Model.FK__Marathon__Countr__59FA5E80" />
+        <AssociationConnector Association="user16Model.FK__Runner__CountryC__60A75C0F" />
+        <AssociationConnector Association="user16Model.FK__Volunteer__Count__6754599E" />
+        <AssociationConnector Association="user16Model.FK__Event__EventType__5812160E" />
+        <AssociationConnector Association="user16Model.FK__Event__MarathonI__59063A47" />
+        <AssociationConnector Association="user16Model.FK__Registrat__Event__5EBF139D" />
+        <AssociationConnector Association="user16Model.FK__Runner__Gender__628FA481" />
+        <AssociationConnector Association="user16Model.FK__Volunteer__Gende__68487DD7" />
+        <AssociationConnector Association="user16Model.FK_Staff_Position" />
+        <AssociationConnector Association="user16Model.FK__Registrat__RaceK__5BE2A6F2" />
+        <AssociationConnector Association="user16Model.FK__Registrat__Regis__5CD6CB2B" />
+        <AssociationConnector Association="user16Model.FK__Registrat__Regis__5FB337D6" />
+        <AssociationConnector Association="user16Model.FK__Registrat__Runne__5DCAEF64" />
+        <AssociationConnector Association="user16Model.FK__Sponsorsh__Regis__6383C8BA" />
+        <AssociationConnector Association="user16Model.FK__User__RoleId__66603565" />
+        <AssociationConnector Association="user16Model.FK__Runner__Email__619B8048" />
+        <AssociationConnector Association="user16Model.FK_Timesheet_Staff1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="maraphonapp._4Coordinator.WindowEmails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:maraphonapp._4Coordinator"
+        mc:Ignorable="d"
+        Title="WindowEmails" Height="227.462" Width="398.312">
+    <Grid>
+        <DataGrid Name="MailGrid" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" AutoGenerateColumns="False"  CanUserAddRows="False" CanUserDeleteRows="False" ColumnWidth="*" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+
+
+    </Grid>
+</Window>

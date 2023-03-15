@@ -1,0 +1,70 @@
+﻿<Page x:Class="maraphonapp._1Main.PageBMR"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:maraphonapp._1Main"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="PageBMR">
+
+    <Grid>
+        <TextBlock VerticalAlignment="Top" Margin="305,9,257,0"  HorizontalAlignment="Center" FontSize="28" FontFamily="Open Sans Semibold" Foreground="Gray" Width="238">BMR калькулятор</TextBlock>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 40 0 0">
+            <TextBlock Margin="30 0 0 15" TextWrapping="Wrap" Width="472">BMR обозначает индекс массы тела. Он используется, чтобы дать вам представление о том, является ли Ваш вес- избыточным или идеальным для вашего роста. Это полезно знать, потому что если ваш вес увеличивается или уменьшается за пределами идеального диапазона, у вас повышается риск заболеть.</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="-65 -10 0 10" Width="221">
+                <ToggleButton Background="LightGray" Margin="0 0 20 0" BorderBrush="Gray" Width="100" Height="91" Name="Male" Checked="Male_Checked" >
+                    <StackPanel >
+                        <Image Stretch="Fill" Source="/Resource/male-icon.png" Height="58" Width="41" ></Image>
+                        <TextBlock HorizontalAlignment="Center" Foreground="Black">Мужской</TextBlock>
+                    </StackPanel>
+
+
+                </ToggleButton>
+                <ToggleButton Background="LightGray" BorderBrush="Gray" Width="100" Height="91" Name="Female" Checked="Female_Checked">
+                    <StackPanel >
+                        <Image Stretch="Fill" Source="/Resource/female-icon.png" Height="58" Width="41" ></Image>
+                        <TextBlock HorizontalAlignment="Center" Foreground="Black">Женский</TextBlock>
+                    </StackPanel>
+
+                </ToggleButton>
+            </StackPanel>
+            <StackPanel Margin="160 0 0 5" Orientation="Horizontal">
+                <TextBlock Margin="0 0 10 0">Рост:</TextBlock>
+                <TextBox Name="Height"  Margin="0 0 5 0" Width="35" ></TextBox>
+                <TextBlock>см</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="166 0 0 5" Orientation="Horizontal">
+                <TextBlock Margin="-1 0 10 0">Вес:</TextBlock>
+                <TextBox Name="Weight" Margin="0 0 5 0" Width="35"></TextBox>
+                <TextBlock>кг</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="140 0 0 0" Orientation="Horizontal">
+                <TextBlock Margin="0 0 10 0">Возраст:</TextBlock>
+                <TextBox Name="Age" Margin="0 0 5 0" Width="35"></TextBox>
+                <TextBlock>лет</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="110 5 0 0" Orientation="Horizontal">
+                <Button Width="80" Name="Result" Click="Result_Click">Расчитать</Button>
+                <Button Width="80">Отмена</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,134,9,123" Height="93">
+            <TextBlock FontSize="17" Margin="60 0 0 0" TextWrapping="Wrap" Width="365" RenderTransformOrigin="0.5,0.5" Height="21">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.209"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>Информация о показателях калорий</TextBlock>
+            <TextBlock Margin="5" FontSize="25" Foreground="Gray" Width="120">Ваш BMR</TextBlock>
+            <TextBlock FontSize="24" Margin="0 0 0 5"  Name="BMR" Width="61">1,670</TextBlock>
+            <TextBlock Margin="40 0 0 0" TextWrapping="Wrap" Text="Ежедневно тратится калорий" Width="210" Height="18"/>
+
+        </StackPanel>
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Right" Width="70" Height="30" Margin="0,25,25,0" x:Name="BtnBack" Content="Назад" Click="BtnBack_Click"/>
+
+    </Grid>
+</Page>

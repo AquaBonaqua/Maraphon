@@ -1,0 +1,66 @@
+﻿<Page x:Class="maraphonapp._2Runner.PageRegOnMarathon"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:maraphonapp._2Runner"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      Title="PageRegOnMarathon">
+
+    <Grid>
+        <TextBlock Foreground="Gray" FontFamily="Open Sans Semibold" FontSize="30" HorizontalAlignment="Center" Margin="223,5,223,0" VerticalAlignment="Top">Регистрация на марафон</TextBlock>
+        <TextBlock Foreground="Gray" TextAlignment="Center" FontFamily="Open Sans Light" FontSize="16" HorizontalAlignment="Center" Margin="63,42,55,0" VerticalAlignment="Top" Width="682"  >Пожалуйста, заполните всю информацию, чтобы зарегистрироваться на Skills <LineBreak/> Marathon 2016 проводимом в Москве, Russia. С вами свяжутся после<LineBreak/>регистрации для уточнения оплаты и другой информации.</TextBlock>
+        <StackPanel Margin="63,92,0,-3" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Width="251">
+            <TextBlock Margin="30 0 0 5"  FontSize="20" Foreground="Gray">Вид марафона</TextBlock>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <CheckBox Unchecked="Type1_Unchecked" Margin="0 0 10 0" Name="Type1" Checked="Type1_Checked"></CheckBox>
+                    <TextBlock>42km Полный марафон($145)</TextBlock>
+                </StackPanel>
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <CheckBox Unchecked="Type2_Unchecked" Margin="0 0 10 0" Name="Type2" Checked="Type2_Checked"></CheckBox>
+                    <TextBlock>21km Полумарафон($75)</TextBlock>
+                </StackPanel>
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <CheckBox Unchecked="Type3_Unchecked" Margin="0 0 10 0" Name="Type3" Checked="Type3_Checked"></CheckBox>
+                    <TextBlock>5km Малая дистанция($20)</TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Margin="10 0 0 10"  FontSize="20" Foreground="Gray">Детали спонсорства</TextBlock>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Margin="0 0 10 0">Взнос:</TextBlock>
+                <ComboBox Name="Charity" Width="140"></ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal">
+                <TextBlock Margin="-46 0 10 0" VerticalAlignment="Center">Сумма взноса:</TextBlock>
+                <TextBox Name="Target" Width="140"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="BtnReg" Click="BtnReg_Click">Регистрация</Button>
+                <Button Name="BtnCancel" Click="BtnCancel_Click">Отмена</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="100 80 20 0" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <TextBlock Margin="20 0 30 0"  FontSize="20" Foreground="Gray">Варианты комплектов</TextBlock>
+            <StackPanel Margin="0 0 0 20" Orientation="Vertical">
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <CheckBox Unchecked="Type4_Unchecked" Margin="0 0 10 0" Name="Type4" Checked="Type4_Checked"></CheckBox>
+                    <TextBlock>Вариант A:($0): Номер бегуна+<LineBreak/>RFID браслет.</TextBlock>
+                </StackPanel>
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <CheckBox Unchecked="Type5_Unchecked" Margin="0 0 10 0" Name="Type5" Checked="Type5_Checked"></CheckBox>
+                    <TextBlock>Вариант B:($20): Вариант A +<LineBreak/>бейсболка + бутылка воды.</TextBlock>
+                </StackPanel>
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <CheckBox Unchecked="Type6_Unchecked" Margin="0 0 10 0" Name="Type6" Checked="Type6_Checked"></CheckBox>
+                    <TextBlock>Вариант С:($45): Вариант B<LineBreak/>+ футболка + сувенирный буклет.</TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Margin="0 0 0 10"  FontSize="20" Foreground="Gray">Регистрационный взнос</TextBlock>
+            <TextBlock Margin="0 0 0 0" HorizontalAlignment="Center" Name="Cost" FontSize="20" Foreground="Gray">$185</TextBlock>
+        </StackPanel>
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Height="27" Margin="0,10,14,0" x:Name="BtnLogout" Content="Выйти" Click="BtnLogout_Click"/>
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70" Height="30" Margin="17,9,0,0" x:Name="BtnBack" Content="Назад" Click="BtnBack_Click" />
+    </Grid>
+</Page>

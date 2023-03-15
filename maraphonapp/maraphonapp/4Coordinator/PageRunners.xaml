@@ -1,0 +1,61 @@
+﻿<Page x:Class="maraphonapp._4Coordinator.PageRunners"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:maraphonapp._4Coordinator"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="PageRunners">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
+        <TextBlock VerticalAlignment="Top" Margin="255,13,246,0"  HorizontalAlignment="Center" FontSize="28" FontFamily="Open Sans Semibold" Foreground="Gray" Width="299" Height="34"><Run Text="Управление бегунами"/></TextBlock>
+        <StackPanel Margin="80 50 0 0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left" >
+            <TextBlock FontSize="20" Margin="0 0 0 10">Сортировка и фильтрация</TextBlock>
+            <StackPanel Margin="0 0 0 5" Orientation="Horizontal">
+                <TextBlock Foreground="Gray" FontSize="18" Margin="0 0 5 0" VerticalAlignment="Center">Статус:</TextBlock>
+                <ComboBox  FontSize="11" Width="120" Height="28" Name="CmbStatus" SelectedValuePath="RegistrationStatusId" DisplayMemberPath="RegistrationStatus" SelectedIndex="0"></ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 0" Orientation="Horizontal">
+                <TextBlock Foreground="Gray" FontSize="18" Margin="-38 0 5 0" VerticalAlignment="Center">Дистанция:</TextBlock>
+                <ComboBox FontSize="11" Name="CmbDistance" SelectedValuePath="EventTypeId" DisplayMemberPath="EventTypeName" SelectedIndex="0" Width="120" Height="28"></ComboBox>
+            </StackPanel>
+            <Button Width="80" Height="28" x:Name="BtnSearch" Click="BtnSearch_Click" Content="Обновить" Margin="102,5" />
+
+        </StackPanel>
+        <StackPanel Margin="0 40 70 0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Right" Height="144" Width="196">
+            <TextBlock TextAlignment="Center" FontSize="20">Выгрузка</TextBlock>
+            <Button Height="40" Width="186" Click="Button_Click">Детальная информация (CSV)</Button>
+            <Button Name="Email" Height="40" Width="186" Click="Email_Click">E-mail список</Button>
+        </StackPanel>
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Height="30" Margin="24,20,0,0" x:Name="BtnBack" Content="Назад" Click="BtnBack_Click" />
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Right" Width="70" Height="30" Margin="0,20,20,0" x:Name="BtnLogout" Content="Выйти" Click="BtnLogout_Click"/>
+
+        <DataGrid  AutoGenerateColumns="False"  CanUserAddRows="False" CanUserDeleteRows="False" ColumnWidth="*" x:FieldModifier="public" Grid.Row="1" Name="grid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Registration.Runner.User.FirstName}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Registration.Runner.User.LastName}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Registration.Runner.User.Email}"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Registration.RegistrationStatu.RegistrationStatus}"/>
+                <DataGridTextColumn Header="Пол" Binding="{Binding Registration.Runner.Gender}" Visibility="Collapsed" />
+                <DataGridTextColumn Header="Страна" Binding="{Binding Registration.Runner.Country.CountryName}" Visibility="Collapsed" />
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Registration.Runner.DateOfBirth}" Visibility="Collapsed" />
+                <DataGridTextColumn Header="Комплект" Binding="{Binding Registration.RaceKitOption.RaceKitOption1}" Visibility="Collapsed" />
+                <DataGridTextColumn Header="Тип марафона" Binding="{Binding Event.EventType.EventTypeName}" Visibility="Collapsed"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" Click="EditBtn_Click" Width="100"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Name="LoadLbl" Content="Экспорт данных..." HorizontalAlignment="Center" Margin="0 60 0 0" VerticalAlignment="Center" FontSize="22" Visibility="Collapsed"/>
+    </Grid>
+
+</Page>

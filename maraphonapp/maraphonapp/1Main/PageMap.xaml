@@ -1,0 +1,201 @@
+﻿<Page x:Class="maraphonapp._1Main.PageMap"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:maraphonapp._1Main"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      Title="PageMap">
+
+    <Grid>
+
+        <Button Width="140" Height="35"  FontSize="20" Name="BtnBack" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,18,15,0" Click="BtnBack_Click">
+            <TextBlock FontFamily="Open Sans Light" Margin="0 -2 0 0" TextAlignment="Center">Назад</TextBlock>
+        </Button>
+        <TextBlock VerticalAlignment="Top" Margin="50,20,199,0"  HorizontalAlignment="Center" FontSize="28" FontFamily="Open Sans Semibold" Foreground="Gray" Height="34" Width="551">Интерактивная карта Marathon Skills 2016</TextBlock>
+        <Image Stretch="Fill" Width="387" Height="295" VerticalAlignment="Center" Margin="40 40 0 0" HorizontalAlignment="Left" Source="/Resource/interactmap.png"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown"   HorizontalAlignment="Left" Height="26" Margin="265,85,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="34"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown_1"   HorizontalAlignment="Left" Height="28" Margin="306,169,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="34"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown_2"   HorizontalAlignment="Left" Height="26" Margin="301,230,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="28"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown_3"   HorizontalAlignment="Left" Height="27" Margin="392,295,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="33"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown_4"   HorizontalAlignment="Left" Height="27" Margin="245,338,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="32"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown_5"   HorizontalAlignment="Left" Height="27" Margin="127,308,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="32"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown_6"   HorizontalAlignment="Left" Height="27" Margin="91,254,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="33"/>
+        <Ellipse Fill="Transparent" PreviewMouseDown="Ellipse_PreviewMouseLeftButtonDown_7"   HorizontalAlignment="Left" Height="26" Margin="81,167,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="34"/>
+        <StackPanel Name="Panel1" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263">
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown1" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock TextAlignment="Center"  Margin="0" FontSize="30">Checkpoint 1</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Avenida Rudge</TextBlock>
+            <TextBlock Margin="5" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="Panel2" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263"  >
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown2" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock  TextAlignment="Center" Margin="0" FontSize="30">Checkpoint 2</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Theatro Municipal</TextBlock>
+            <TextBlock Margin="5" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-toilets.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Toilets</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-information.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Information</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-medical.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Medical</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="Panel3" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263" >
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown3" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock TextAlignment="Center"  Margin="0" FontSize="30">Checkpoint 3</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Parque do Ibirapuera</TextBlock>
+            <TextBlock Margin="6" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-toilets.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Toilets</TextBlock>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Name="Panel4" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263"  >
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown4" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock TextAlignment="Center"  Margin="0" FontSize="30">Checkpoint 4</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Jardim Luzitania</TextBlock>
+            <TextBlock Margin="10" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-toilets.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Toilets</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-medical.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Medical</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="Panel5" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263" >
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown5" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock TextAlignment="Center"  Margin="0" FontSize="30">Checkpoint 5</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Iguatemi</TextBlock>
+            <TextBlock Margin="10" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-toilets.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Toilets</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-information.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Information</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="Panel6" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263" >
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown6" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock TextAlignment="Center"  Margin="0" FontSize="30">Checkpoint 6</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Rua Lisboa</TextBlock>
+            <TextBlock Margin="10" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-toilets.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Toilets</TextBlock>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel  Name="Panel7" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263" >
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown7" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock TextAlignment="Center"  Margin="0" FontSize="30">Checkpoint 7</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Cemitério da Consolação</TextBlock>
+            <TextBlock Margin="10" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-toilets.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Toilets</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-information.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Information</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-medical.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Medical</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="Panel8" Visibility="Hidden" Margin="0 40 60 0"  Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Center" Height="315" Width="263" >
+            <Image PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown8" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="16" Height="16" Source="/Resource/close.png"></Image>
+            <TextBlock TextAlignment="Center"  Margin="0" FontSize="30">Checkpoint 8</TextBlock>
+            <TextBlock  Margin="10" FontSize="25">Cemitério da Consolação</TextBlock>
+            <TextBlock Margin="10" FontSize="20" FontWeight="Normal">Особенности:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-drinks.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Drinks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-energy-bars.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Energy Bars</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-toilets.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Toilets</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-information.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Information</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="6" Width="20" Height="20" Source="/Resource/MapIcons/map-icon-medical.png"></Image>
+                <TextBlock Margin="4" FontSize="20" FontWeight="Normal">- Medical</TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

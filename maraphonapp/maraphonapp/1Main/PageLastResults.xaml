@@ -1,0 +1,60 @@
+﻿<Page x:Class="maraphonapp._1Main.PageLastResults"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:maraphonapp._1Main"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="1000"
+      Title="PageLastResults">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Foreground="Gray" FontFamily="Open Sans Semibold" FontSize="30" HorizontalAlignment="Center"  VerticalAlignment="Top">Результаты предыдущих гонок</TextBlock>
+        <StackPanel Margin="50,64,0,7" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Margin="12 0 10 0" FontSize="20">Марафон:</TextBlock>
+                <ComboBox Name="Marathon" Margin="0 0 250 0" Height="30" Width="150" ></ComboBox>
+                <TextBlock VerticalAlignment="Center" Margin="47 0 10 0" FontSize="20">Пол:</TextBlock>
+                <ComboBox Name="CBGender" Height="30" Width="150" >
+                 
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Margin="1 0 10 0" FontSize="20">Дистанция:</TextBlock>
+                <ComboBox Name="Distance"  Margin="-1 0 250 0" Height="30" Width="150"></ComboBox>
+                <TextBlock VerticalAlignment="Center" Margin="-9 0 10 0" FontSize="20">Категория:</TextBlock>
+                <ComboBox Name="CBAge" Height="30" Width="150">
+                    <ComboBoxItem>до 18</ComboBoxItem>
+                    <ComboBoxItem>18-29</ComboBoxItem>
+                    <ComboBoxItem>30-39</ComboBoxItem>
+                    <ComboBoxItem>40-55</ComboBoxItem>
+                    <ComboBoxItem>56-70</ComboBoxItem>
+                    <ComboBoxItem>более 70</ComboBoxItem>
+                </ComboBox>
+                <Button Width="80" Height="30" Margin="50 0 0 0" Click="Button_Click">Поиск</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock FontFamily="Open Sans Semibold" Margin="0 0 5 0" FontSize="19">Всего бегунов:</TextBlock>
+                <TextBlock Name="RunnerSumm" Margin="0 0 0 0" FontSize="19">1234</TextBlock>
+                <TextBlock FontFamily="Open Sans Semibold" Margin="80 0 5 0" FontSize="19">Всего бегунов финишировало:</TextBlock>
+                <TextBlock Name="RunnerSum" Margin="0 0 0 0" FontSize="19">1234</TextBlock>
+                <TextBlock FontFamily="Open Sans Semibold" Margin="80 0 5 0" FontSize="19">Среднее время:</TextBlock>
+                <TextBlock Name="RunnerSu" Margin="0 0 0 0" FontSize="19">4h 02m 10s</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Right" Width="70" Height="30" Margin="0,16,31,0" Name="BtnBack" Content="Назад" Click="BtnBack_Click"/>
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ColumnWidth="*" Grid.Row="1" Name="grid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Место" Binding="{Binding BibNumber}"/>
+                <DataGridTextColumn Header="Время" Binding="{Binding RaceTime}"/>
+                <DataGridTextColumn Header="Имя бегуна" Binding="{Binding Registration.Runner.User.FirstName}"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding Registration.Runner.getYear}"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Registration.Runner.Country.CountryName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

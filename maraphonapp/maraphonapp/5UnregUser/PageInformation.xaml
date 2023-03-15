@@ -1,0 +1,34 @@
+﻿<Page x:Class="maraphonapp._1Main.PageInformation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:maraphonapp._1Main"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="PageInformation">
+
+    <Grid>
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70" Height="30" Margin="25" Name="BtnBack" Click="BtnBack_Click">Назад</Button>
+        <TextBlock VerticalAlignment="Top" Margin="20"  HorizontalAlignment="Center" FontSize="28" FontFamily="Open Sans Semibold" Foreground="Gray">Подробная информация</TextBlock>
+        <StackPanel  Margin="0 40 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <StackPanel  Orientation="Vertical">
+                <Button FontFamily="Open Sans Light" FontSize="22" Margin="10" Width="320" Name="MarathonInfo"  Height="71" Click="MarathonInfo_Click">Marathon skills 2016</Button>
+                <Button Name="BtnLastResult" FontSize="20" Margin="10" Width="320" Height="70" Click="BtnLastResult_Click">
+                    <TextBlock FontFamily="Open Sans Light" FontSize="20" TextAlignment="Center">Предыдущие <LineBreak/> результаты</TextBlock>
+                </Button>
+                <Button FontSize="20" Name="BtnBMICalc" FontFamily="Open Sans Light" Margin="10" Width="320" Height="60" Click="BtnBMICalc_Click">BMI калькулятор</Button>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Button Name="BtnMarathonLength" FontSize="20" Margin="10" Width="320" Height="71" Click="BtnMarathonLength_Click">
+                    <TextBlock  FontFamily="Open Sans Light" FontSize="20" TextAlignment="Center"><Run Text="Насколько долгий"/><LineBreak/><Run Text="марафон?"/></TextBlock>
+                </Button>
+                <Button Margin="10" Width="320" Height="69" Click="Button_Click">
+                    <TextBlock FontFamily="Open Sans Light" FontSize="20" TextAlignment="Center"><Run Text="Список благотворительных"/><LineBreak/><Run Text="организаций"/></TextBlock>
+                </Button>
+                <Button Name="BtnBMRCalc" FontSize="20" FontFamily="Open Sans Light" Margin="10" Width="320" Height="60" Content="BMR калькулятор" Click="BtnBMRCalc_Click"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>

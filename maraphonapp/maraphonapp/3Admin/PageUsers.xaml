@@ -1,0 +1,47 @@
+﻿<Page x:Class="maraphonapp._3Admin.PageUsers"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:maraphonapp._3Admin"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="PageUsers">
+
+    <Grid>
+        <TextBlock VerticalAlignment="Top" Margin="198,20,208,0"  HorizontalAlignment="Center" FontSize="28" FontFamily="Open Sans Semibold" Foreground="Gray" Width="394"><Run Text="Управление пользователями"/></TextBlock>
+        <StackPanel Margin="40 0 0 70" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Button FontSize="20" Content="+ Добавление нового" HorizontalAlignment="Left" Margin="0 0 0 90" VerticalAlignment="Top" Width="229" Height="40"/>
+            <StackPanel Margin="0 0 0 0" Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Margin="0 0 5 0">Всего пользователей:</TextBlock>
+                <TextBlock>123</TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Margin="0 0 20 95" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <StackPanel Margin="0 0 20 5" Orientation="Horizontal">
+                <TextBlock Margin="0 0 10 0" FontSize="20">Фильтр по ролям:</TextBlock>
+                <ComboBox Width="120">
+                    <ComboBoxItem>Бегун</ComboBoxItem>
+                    <ComboBoxItem>Координатор</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 5" Orientation="Horizontal">
+                <TextBlock Margin="14 0 9 0" FontSize="20">Сортировать по:</TextBlock>
+                <ComboBox Width="120">
+                    <ComboBoxItem>Имени</ComboBoxItem>
+                    <ComboBoxItem></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="106 0 9 0" FontSize="20">Поиск:</TextBlock>
+                <TextBox Width="120"></TextBox>
+
+
+            </StackPanel>
+            <Button Margin="150 10 0 0" Width="110" Height="32">Обновить</Button>
+        </StackPanel>
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" Height="26" Margin="19,16,0,0" x:Name="BtnBack" Content="Назад" Click="BtnBack_Click" />
+        <Button FontFamily="Open Sans Light" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Height="26" Margin="0,16,20,0" x:Name="BtnLogout" Content="Выйти" Click="BtnLogout_Click"/>
+    </Grid>
+</Page>

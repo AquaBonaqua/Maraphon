@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="user16ModelStoreContainer" CdmEntityContainer="user16Entities">
+    <EntitySetMapping Name="Charities">
+      <EntityTypeMapping TypeName="user16Model.Charity">
+        <MappingFragment StoreEntitySet="Charity">
+          <ScalarProperty Name="CharityLogo" ColumnName="CharityLogo" />
+          <ScalarProperty Name="CharityDescription" ColumnName="CharityDescription" />
+          <ScalarProperty Name="CharityName" ColumnName="CharityName" />
+          <ScalarProperty Name="CharityId" ColumnName="CharityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="user16Model.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryFlag" ColumnName="CountryFlag" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="user16Model.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="MaxParticipants" ColumnName="MaxParticipants" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="MarathonId" ColumnName="MarathonId" />
+          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventTypes">
+      <EntityTypeMapping TypeName="user16Model.EventType">
+        <MappingFragment StoreEntitySet="EventType">
+          <ScalarProperty Name="EventTypeName" ColumnName="EventTypeName" />
+          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="user16Model.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="GenderHuman" ColumnName="GenderHuman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marathons">
+      <EntityTypeMapping TypeName="user16Model.Marathon">
+        <MappingFragment StoreEntitySet="Marathon">
+          <ScalarProperty Name="YearHeld" ColumnName="YearHeld" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="MarathonName" ColumnName="MarathonName" />
+          <ScalarProperty Name="MarathonId" ColumnName="MarathonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="user16Model.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="Payrate" ColumnName="Payrate" />
+          <ScalarProperty Name="PayPeriod" ColumnName="PayPeriod" />
+          <ScalarProperty Name="PositionDescription" ColumnName="PositionDescription" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RaceKitOptions">
+      <EntityTypeMapping TypeName="user16Model.RaceKitOption">
+        <MappingFragment StoreEntitySet="RaceKitOption">
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="RaceKitOption1" ColumnName="RaceKitOption" />
+          <ScalarProperty Name="RaceKitOptionId" ColumnName="RaceKitOptionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="user16Model.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="SponsorshipTarget" ColumnName="SponsorshipTarget" />
+          <ScalarProperty Name="CharityId" ColumnName="CharityId" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="RegistrationStatusId" ColumnName="RegistrationStatusId" />
+          <ScalarProperty Name="RaceKitOptionId" ColumnName="RaceKitOptionId" />
+          <ScalarProperty Name="RegistrationDateTime" ColumnName="RegistrationDateTime" />
+          <ScalarProperty Name="RunnerId" ColumnName="RunnerId" />
+          <ScalarProperty Name="RegistrationId" ColumnName="RegistrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistrationEvents">
+      <EntityTypeMapping TypeName="user16Model.RegistrationEvent">
+        <MappingFragment StoreEntitySet="RegistrationEvent">
+          <ScalarProperty Name="RaceTime" ColumnName="RaceTime" />
+          <ScalarProperty Name="BibNumber" ColumnName="BibNumber" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="RegistrationId" ColumnName="RegistrationId" />
+          <ScalarProperty Name="RegistrationEventId" ColumnName="RegistrationEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistrationStatus">
+      <EntityTypeMapping TypeName="user16Model.RegistrationStatu">
+        <MappingFragment StoreEntitySet="RegistrationStatus">
+          <ScalarProperty Name="RegistrationStatus" ColumnName="RegistrationStatus" />
+          <ScalarProperty Name="RegistrationStatusId" ColumnName="RegistrationStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="user16Model.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Runners">
+      <EntityTypeMapping TypeName="user16Model.Runner">
+        <MappingFragment StoreEntitySet="Runner">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RunnerId" ColumnName="RunnerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sponsorships">
+      <EntityTypeMapping TypeName="user16Model.Sponsorship">
+        <MappingFragment StoreEntitySet="Sponsorship">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="RegistrationId" ColumnName="RegistrationId" />
+          <ScalarProperty Name="SponsorName" ColumnName="SponsorName" />
+          <ScalarProperty Name="SponsorshipId" ColumnName="SponsorshipId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="user16Model.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Timesheets">
+      <EntityTypeMapping TypeName="user16Model.Timesheet">
+        <MappingFragment StoreEntitySet="Timesheet">
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="TimesheetId" ColumnName="TimesheetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="user16Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Volunteers">
+      <EntityTypeMapping TypeName="user16Model.Volunteer">
+        <MappingFragment StoreEntitySet="Volunteer">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="VolunteerId" ColumnName="VolunteerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
